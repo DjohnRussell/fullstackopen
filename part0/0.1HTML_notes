@@ -1,0 +1,22 @@
+# Full Stack Open - HTML Notes (Part 0.1)
+
+## 1. Basic Structure of an HTML Document
+- An HTML document consists of elements enclosed in tags.
+- Key parts of an HTML file:
+  - `<!DOCTYPE html>` → Declares the document type.
+  - `<html>` → Root element of the document.
+  - `<head>` → Contains metadata like `<title>` and `<meta charset="UTF-8">`.
+  - `<body>` → Contains visible content.
+
+## 2. Common HTML Elements
+- **Headings:** `<h1>` to `<h6>` define headings.
+- **Paragraphs:** `<p>` is used for text blocks.
+- **Links:** `<a href="URL">Text</a>` creates a hyperlink.
+- **Images:** `<img src="file.jpg" alt="Description">` displays images.
+- **Lists:**
+  - `<ol><li>Item</li></ol>` → Ordered list (numbered).
+  - `<ul><li>Item</li></ul>` → Unordered list (bullets).
+
+## 3. Forms and Inputs
+- Forms collect user input:
+

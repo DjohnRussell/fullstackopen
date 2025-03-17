@@ -1,0 +1,72 @@
+# Full Stack Open - CSS Notes (Part 0.2)
+
+## 1. What is CSS?
+- CSS (Cascading Style Sheets) is used to style HTML elements.
+- It controls layout, colors, fonts, spacing, and responsiveness.
+
+## 2. Ways to Apply CSS
+1. **Inline CSS** (inside an element):
+   <p style="color: red;">This is red text</p>
+2. **Internal CSS** (inside <style> in <head>):
+   <style>
+     p { color: red; }
+   </style>
+3. **External CSS** (separate .css file):
+   <link rel="stylesheet" href="styles.css">
+
+## 3. Basic CSS Syntax
+- CSS uses `selector { property: value; }` format.
+  p {
+    color: blue;
+    font-size: 16px;
+  }
+
+## 4. Common Selectors
+- **Element selector:** p { color: red; } (applies to all <p> elements)
+- **Class selector:** .classname { font-weight: bold; } (used with class="classname")
+- **ID selector:** #idname { color: green; } (used with id="idname")
+- **Group selector:** h1, h2, p { margin: 10px; } (applies styles to multiple elements)
+- **Descendant selector:** div p { color: blue; } (targets <p> inside <div>)
+
+## 5. Box Model
+- Every HTML element is a box with:
+  - **Content** (text or image)
+  - **Padding** (space inside the border)
+  - **Border** (surrounds the padding)
+  - **Margin** (space outside the border)
+
+  Example:
+  div {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+  }
+
+## 6. Positioning Elements
+- `static` (default)
+- `relative` (relative to its normal position)
+- `absolute` (relative to nearest positioned ancestor)
+- `fixed` (fixed on the screen)
+- `sticky` (sticks when scrolling)
+
+## 7. Flexbox (For Layout)
+- Use `display: flex;` for flexible layouts.
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+## 8. Media Queries (For Responsive Design)
+- Adjusts styles based on screen size:
+  @media (max-width: 600px) {
+    body {
+      background-color: lightgray;
+    }
+  }
+
+## 9. Developer Tools
+- Right-click → Inspect Element to test styles.
+- The **Elements tab** shows applied styles.
+
