@@ -1,0 +1,10 @@
+User -> Browser: Enters URL (https://studies.cs.helsinki.fi/exampleapp/spa)
+Browser -> Server: GET /exampleapp/spa (Requests HTML page)
+Server -> Browser: Sends HTML file
+Browser -> Server: GET /exampleapp/main.js (Fetches JavaScript file)
+Server -> Browser: Sends JavaScript file
+Browser -> Server: GET /exampleapp/data.json (Fetches saved notes)
+Server -> Database: Retrieves notes
+Database -> Server: Sends notes data
+Server -> Browser: Returns notes data (JSON)
+Browser -> User: Renders notes on the page

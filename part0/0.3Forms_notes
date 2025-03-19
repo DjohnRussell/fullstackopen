@@ -1,0 +1,93 @@
+# Full Stack Open - Forms and Event Handling (Part 0.3)
+
+## 1. HTML Forms
+- Forms collect user input and send it to a server.
+- `<form>` element wraps input fields and has attributes:
+  - `action`: URL where the form data is sent.
+  - `method`: HTTP method (`GET` or `POST`).
+
+Example:
+  <form action="/submit" method="POST">
+    <input type="text" name="username">
+    <button type="submit">Submit</button>
+  </form>
+
+## 2. Input Elements
+- `<input>`: Text, email, password, number, etc.
+- `<textarea>`: Multi-line input.
+- `<select>`: Dropdown menu.
+- `<button>`: Clickable button.
+
+Example:
+  <input type="text" name="name" placeholder="Enter your name">
+  <input type="password" name="password">
+  <textarea name="message"></textarea>
+  <select name="options">
+    <option value="A">Option A</option>
+    <option value="B">Option B</option>
+  </select>
+
+## 3. Handling Form Submission
+- JavaScript can prevent default submission and handle input data.
+
+Example:
+  <form id="myForm">
+    <input type="text" id="nameInput">
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevents page reload
+      let name = document.getElementById("nameInput").value;
+      console.log("Name:", name);
+    });
+  </script>
+
+## 4. Accessing Input Values
+- Use `document.getElementById()` or `querySelector()`.
+- `.value` gets input field data.
+
+Example:
+  let email = document.getElementById("email").value;
+  console.log(email);
+
+## 5. Form Validation
+- Check if input is correct before submission.
+
+Example:
+  document.getElementById("myForm").addEventListener("submit", function(event) {
+    let name = document.getElementById("nameInput").value;
+    if (name === "") {
+      alert("Name cannot be empty!");
+      event.preventDefault();
+    }
+  });
+
+## 6. Event Listeners
+- `addEventListener()` listens for user actions.
+
+Example:
+  document.getElementById("btn").addEventListener("click", function() {
+    alert("Button clicked!");
+  });
+
+## 7. Handling Checkbox and Radio Buttons
+- Use `.checked` to check if selected.
+
+Example:
+  let isChecked = document.getElementById("checkbox").checked;
+  console.log("Checked:", isChecked);
+
+## 8. Preventing Default Form Submission
+- Use `event.preventDefault()` to stop page reload.
+
+Example:
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    console.log("Form submitted without reloading!");
+  });
+
+## 9. Developer Tools
+- Use **Console (F12)** to debug form inputs.
+- Check **Network Tab** to see form requests.
+

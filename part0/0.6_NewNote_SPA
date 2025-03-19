@@ -1,0 +1,24 @@
+In this task we will use both the previous tasks to make this diagram
+
+User -> Browser: Enters URL (https://studies.cs.helsinki.fi/exampleapp/spa)
+Browser -> Server: GET /exampleapp/spa (Requests HTML page)
+Server -> Browser: Sends HTML file
+Browser -> Server: GET /exampleapp/main.js (Fetches JavaScript file)
+Server -> Browser: Sends JavaScript file
+Browser -> Server: GET /exampleapp/data.json (Fetches saved notes)
+Server -> Database: Retrieves notes
+Database -> Server: Sends notes data
+Server -> Browser: Returns notes data (JSON)
+Browser -> User: Renders notes on the page
+
+User -> Browser: Adds a new note and clicks "Save"
+Browser -> Server: POST /exampleapp/new_note_spa (Sends new note)
+Server -> Database: Stores note
+Database -> Server: Confirms storage
+Server -> Browser: Responds with success message
+Browser -> Server: GET /exampleapp/data.json (Fetches updated notes)
+Server -> Database: Retrieves all notes
+Database -> Server: Sends updated notes list
+Server -> Browser: Returns updated notes list (JSON)
+Browser -> User: Updates UI with new notes
+

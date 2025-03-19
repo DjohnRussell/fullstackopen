@@ -1,0 +1,11 @@
+User -> Browser: Clicks "Save"
+Browser -> Server: POST /api/notes (sends new note)
+Server -> Database: Stores note
+Database -> Server: Confirms storage
+Server -> Browser: Responds with success message
+Browser -> Server: GET /api/notes (fetches updated notes)
+Server -> Database: Retrieves all notes
+Database -> Server: Sends notes list
+Server -> Browser: Returns updated notes list
+Browser -> User: Updates UI with new notes
+
